@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connectDB = () => {
   mongoose
-    .connect(MONGO_URI, {
+    .connect(process.env.MONGO_URI, {
       dbName: "myTodoApi",
     })
     .then((e) =>
